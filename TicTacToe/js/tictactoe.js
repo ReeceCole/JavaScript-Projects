@@ -5,10 +5,10 @@ function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
-            select.style.backgroundimage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/X.png")';
             }
             else { 
-                select.style.backgroundimage = 'url("images/o.png")';
+                select.style.backgroundImage = 'url("images/O.png")';
             }
             selectedSquares.push(squareNumber + activePlayer);
             checkWinConditions();
@@ -33,13 +33,16 @@ function computersTurn() {
             placeXOrO(pickASquare);
             success = true;
         };
-    }
+      }
+    }   
+  }
 }
-        }
-    }
+
+        
+    
 
 function checkWinConditions() {
-    if (arrayIncludes('0X', '1x', '2X')) { drawWinLine(50, 100, 558, 100) }
+    if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
     else if(arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304) }
     else if(arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
     else if(arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 50, 100, 558) }
