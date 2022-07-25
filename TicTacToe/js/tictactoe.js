@@ -13,7 +13,7 @@ function placeXOrO(squareNumber) {
             selectedSquares.push(squareNumber + activePlayer);
             checkWinConditions();
             if (activePlayer === 'X') {
-                activePlayer = '0';
+                activePlayer = 'O';
             }
         else {
                 activePlayer = 'X';
@@ -24,7 +24,7 @@ function placeXOrO(squareNumber) {
                 setTimeout(function () { computersTurn(); }, 1000);
             }
             return true;
-function computersTurn() {
+function computersTurn() {}
     let success = false;
     let pickASquare;
     while (!success) {
@@ -36,7 +36,7 @@ function computersTurn() {
       }
     }   
   }
-}
+
 
         
     
@@ -90,16 +90,17 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     y2 = coordY2,
     x = x1,
     y = y1
-}
+
 
 function animateLineDrawing() {
     const animationLoop = requestAnimationFrame(animateLineDrawing);
-    c.clearRecr(0, 0, 608, 608);
-    c.beginpath();
+    c.clearRect(0, 0, 608, 608);
+    c.beginPath();
     c.moveTo(x1, y1);
     c.lineTo(x,y);
     c.lineWidth = 10;
     c.strokeStyle = 'rgba(70, 255, 33, .8)';
+    c.stroke();
     if (x1 <= x2 && y1 <= y2) {
         if (x < x2) { x += 10; }
         if (y < y2) { y += 10;}
@@ -110,6 +111,7 @@ function animateLineDrawing() {
         if (y > y2) {y -= 10; }
         if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
     }
+}
 
 function clear() {
         const animationLoop = requestAnimationFrame(clear);
