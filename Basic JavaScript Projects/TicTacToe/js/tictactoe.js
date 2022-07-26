@@ -24,7 +24,7 @@ function placeXOrO(squareNumber) {
                 setTimeout(function () { computersTurn(); }, 1000);
             }
             return true;
-function computersTurn() {}
+function computersTurn() {
     let success = false;
     let pickASquare;
     while (!success) {
@@ -36,7 +36,7 @@ function computersTurn() {}
       }
     }   
   }
-
+}
 
         
     
