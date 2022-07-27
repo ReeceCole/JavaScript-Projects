@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adopt a Dog</title>
+		<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
+		<script src="./JS/onepagewebsite.js" defer></script>
+	</head>
+	<body>
+	
+		<!-- NAV -->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#gallery"><li>Gallery</li></a>
+					<a href="#contact"><li>Contact Info</li></a>
+				</ul>
+			</div>
+		</div>
+		<!-- END NAV -->
+		
+		<!-- HOME -->
+		<div id="home">
+			<div>
+				<div>
+					<span>Adopt a Dog</span>
+				</div>
+			</div>
+		</div>
+		<!--END HOME -->
+		<!-- Gallery-->
+		<section>
+			<div id="gallery">
+				<h1>Dogs</h1>
+				<div>
+				
+				
+					<!--PHOTO-CONTAINER 1 -->
+					<div>
+						<div>
+							<img src="./images/thumb/thumbnail_1.webp" alt="Image not found">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>We have a variety of dogs just waiting to find a home.</p>
+							</div>
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 1 -->
+					
+					<!--PHOTO-CONTAINER 2 -->
+					<div>
+						<div>
+							<img src="./images/thumb/thumbnail_2.jfif" alt="Image not found">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>We have a variety of dogs just waiting to find a home.</p>
+							</div>
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 2 -->
+					
+					<!--PHOTO-CONTAINER 3 -->
+					<div>
+						<div>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/sOFa--KhbbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>We have a variety of dogs just waiting to find a home.</p>
+							</div>
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 3 -->
+					
+					<!--PHOTO-CONTAINER 3 -->
+					<div>
+						<div>
+							<img src="./images/thumb/thumbnail_3.jfif" alt="Image not found">
+							<div>
+								<h3>Click to Enlarge</h3>
+								<p>We have a variety of dogs just waiting to find a home.</p>
+							</div>
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 3 -->
+					
+				</div>
+			</div>
+		</section>
+		<!--END Gallery-->
+
+		<!--Light Box-->
+		<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="./images/thumb/thumbnail_1.webp" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./images/thumb/thumbnail_2.jfif" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./images/thumb/thumbnail_3.jfif" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	</div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<img src="./images/thumb/thumbnail_1.webp" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<img src="./images/thumb/thumbnail_2.jfif" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img src="./images/thumb/thumbnail_3.jfif" style="width:100%">
+	  </div>
+
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="./images/thumb/thumbnail_1.webp" onclick="currentSlide(1)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./images/thumb/thumbnail_2.jfif" onclick="currentSlide(2)" alt="Snow">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./images/thumb/thumbnail_3.jfif" onclick="currentSlide(3)" alt="Mountains">
+	  </div>
+		<!--Light Box-->
+
+	
+		
+		<!-- RSVP -->
+		<section>
+			<div id="contact">
+				<div>
+					<h1>Contact Info</h1>
+					<div>
+						<h2><span>Your new friend is just one click away</span>
+							<br /> Adopt a dog today!
+						</h2>
+						<p>
+							Please provide us with your basic contact information.
+						</p>
+						<div>
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="First Name">
+								<input class="rsvp" type="text" value="Last Name">
+								<input class="rsvp" type="text" value="Email Address">
+								<input class="rsvp" type="text" value="Phone Number">
+								<div class="form-spacer">
+									<label class="terms">Terms and Conditions</label>
+								</div>
+								<div>
+									<input type="submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END RSVP-->
+		
+		<!-- FOOTER -->
+		<div>
+			www.Adoptadog.com &nbsp;|&nbsp; &copy; 2016
+		</div>
+		<!-- END FOOTER -->
+		
+	</body>
+</html>
